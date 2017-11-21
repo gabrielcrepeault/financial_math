@@ -1,0 +1,71 @@
+% Pr?ambule pour la feuille de formules
+
+	\usepackage[T1]{fontenc} % une des 2 commandes permet d'avoir des accents
+	\usepackage{lmodern}	%
+	\usepackage{babel}		% permet d'inclure les r?glages pour le fran?ais
+	\usepackage{amsmath,amsthm,amssymb,latexsym,amsfonts}
+								%SYMBOLES MATH?MATIQUES
+	\usepackage{eqnarray}	% pour faire des ?quations align?s
+	\usepackage{empheq}	% permet de mettre en encadr? des ?quations math?matiques!
+	\usepackage{numprint}	% permet d'utiliser du contenu num?rique avanc?
+	\usepackage{graphicx}	% permet d'inclure des images dans un fichier
+	\usepackage{hyperref}	% permet de faire des hyperliens dans le document
+	\usepackage{color,soul}	% permet de surligner en jaune	
+	\usepackage[dvipsnames]{xcolor}	% permet de mettre des bo?te en couleur
+	\usepackage{colortbl}
+	\usepackage{pdfpages}	% permet d'ins√©rer un PDF dans ce fichier PDF (avec la fonction \includepdf[pages = {}]								{nomdupdf.pdf}
+	\usepackage{pict2e}		% ajoute des fonctionnalit√©s pour dessiner en programmation
+	\usepackage[tikz]{bclogo}
+	
+% PACKAGE DE VINCENT GOULET ET DAVID BEAUCHEMIN POUR DES SYMBOLES D'ACTUARIAT : 
+	\usepackage{actuarialangle}
+  	\usepackage{actuarialsymbol}
+
+
+	
+% COULEUR
+	\definecolor{orange}{rgb}{0.99,0.69,0.07}
+	\newcommand{\orange}{\textcolor{orange}}
+	\newcommand{\red}{\textcolor{red}}
+	\newcommand{\blue}{\textcolor{blue}}
+	\newcommand{\green}{\textcolor{green}}
+	\newcommand{\purple}{\textcolor{magenta}}
+	\newcommand{\yellow}{\textcolor{yellow}}	
+	\newcommand{\darkgreen}{\textcolor{Green}}
+
+
+% OPTIONS AJOUT?ES POUR LES COULEURS DE TOUCHE DE LA CALCULATRICE	
+
+	\newcommand{\touche}{\fcolorbox{black}{CadetBlue}}
+	\newcommand{\second}{\fcolorbox{black}{yellow}{2nd}}
+	\newcommand{\eval}{\biggr\rvert}
+	
+% CR?ATION DE NOUVELLES COMMANDES, pour se faire des raccourcis
+	\newcommand{\p}{\paragraph{}}
+	\newcommand{\egal}{\Leftrightarrow}
+	\newcommand{\n}{\newline{}}
+	
+% Cr?ation de ?Theorem? : ?a me cr?e une s?rie de th?or?me, convention, exemple num?rot?s
+	\newtheorem{conv}{Convention}
+	\newtheorem{definition}{\purple{D?finition}}
+	\newtheorem{remarque}{\blue{Remarque}}	
+	
+% Modification ? l'en-t?te et le pied de page
+	\usepackage{fancyhdr}
+	\pagestyle{fancy}
+		% l'En-t?te
+		\renewcommand{\headrulewidth}{0.5pt}
+		\fancyhead[L]{Feuille de formules ACT-1001}
+		\fancyhead[R]{Automne 2017}		
+		
+		% Pied de page
+		\renewcommand{\footrulewidth}{1pt}
+		\fancyfoot[R]{\thepage}
+		\fancyfoot[L]{derniËre mise ‡ jour : \today}
+		\fancyfoot[C]{} % pour que le num?ro de page ne se mette pas
+	
+
+% -----------------------------------------------------------------------------------------------
+% FIN DU PR?AMBULE
+% -----------------------------------------------------------------------------------------------
+	

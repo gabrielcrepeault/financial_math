@@ -1,0 +1,252 @@
+\documentclass[12pt,french]{report}
+	\input{preambule_feuilleformule.tex} % SETTINGS
+
+% Couleur définie pour chapitre 1 : cyan
+% Couleur définie pour chapitre 2 : Apricot
+	
+	
+% -------------------------------------------------------------------------------------------	
+\begin{document}
+% -------------------------------------------------------------------------------------------
+\subsection*{Chapitre 1}	% CHAPITRE 1
+\begin{displaymath}
+\begin{array}{|c|c|c|}
+\hline
+% Contexte d'intérêt composé
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{intérêt composé}} \\ % sujet
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+\text{Facteur d'accumulation} & a(t) & a(t) = (1+i)^t \\
+\hline
+\text{Valeur accumulée} & A(t) & A(t) = A(0)(1+i)^t  \\	
+\hline	\hline
+\text{facteur d'actualisation} & v^t & v^t=\left( \frac{1}{1+i} \right)^t \\
+\hline
+\text{Valeur actualisée} & A(0) & A(0) = A(t)v_i^t \\
+\hline	\hline
+% taux d'intérêt simple
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{intérêt simple}} \\ % sujet
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+\text{Facteur d'accumulation} & a(t) & a(t) = (1+it) \\
+\hline
+\text{Facteur d'actualisation} & v(t) & v(t) = \frac{1}{1+it}  \\	
+\hline	\hline
+\text{Prix d'un bon du trésor canadien} & \emph{T-Bills} & Prix = 100 \left(1+ \frac{it}{\red{365}} \right)^{-1} \\
+\hline \hline
+% Conversion de taux
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{Conversion de taux}} \\ % sujet
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+\text{Taux intérêt \underline{effectif} \emph{annuel}} & i & i = \left( 1 + \frac{i^{(m)}}{m} \right)^m - 1 \\
+\hline
+\text{Taux d'intérêt \underline{nominal} \emph{annuel}} & i^{(m)} & i^{(m)} = m \left( (1+i)^{\frac{1}{m}} - 1 \right)  \\
+\hline \hline
+% taux d'escompte
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{Taux d'escompte}} \\
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+\text{Conversion du taux d'intérêt} & i \to d & d = \frac{i}{1+i} \\
+\text{Conversion du taux d'escompte} & d \to i & i = \frac{1}{1-d}\\
+\hline
+\text{Taux d'escompte \underline{nominal} \emph{annuel}} & d^{(m)} & d^{(m)} = m\left(1 - (1-d)^{\frac{1}{m}} \right)\\
+\hline
+\text{Taux d'escompte \underline{effectif} \emph{annuel}} & d & d = 1 - \left(1 - \frac{d^{(m)}}{m} \right)^m\\
+\hline	\hline
+\text{Valeur accumulée} & a(t) & a(t) = (1-d)^{\blue{-t}}\\
+\hline
+\text{Valeur actualisée} & v(t) & v(t) = (1-d)^{\blue{t}}\\
+\hline	\hline
+\text{Prix d'un bon du trésor américain} &  & Prix = 100\left(1 - \frac{dt}{\red{360}} \right)^t\\
+\hline \hline
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{Contexte d'inflation}} \\	
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+\text{Taux d'intérêt réel (après inflation)} & i_{réel} & i_{réel} = \frac{i-r}{1+r} \\ 
+\hline
+\end{array}
+\end{displaymath}
+\p
+\begin{displaymath}
+% Force d'intérêt
+\begin{array}{| c | c | c |}
+\rowcolor{cyan} \multicolumn{3}{|c|}{\text{Force d'intérêt}} \\
+\rowcolor{lightgray} \text{Nom} & \text{notation} & \text{formule} \\
+\hline 	\hline
+ & \delta = \lim_{m \to \infty} i^{(m)} & \delta = \ln(1+i) \\
+% pas de \hline pour tout rassembler
+\text{Force d'intérêt}  & \delta = \lim_{m \to \infty} d^{(m)} & \delta = \ln(\frac{1}{1-d}) \\
+  & & \delta = \frac{a'(t)}{a(t)} \\
+\hline
+\text{Taux effectif} & i & i = e^{i^{(m)}} \\
+\hline	\hline
+a(t) \text{\textbf{si force d'intérêt continue}} & \delta_t = \delta & a(t) = e^{\delta t} \\
+a(t) \text{\textbf{si force d'intérêt variable}} & \delta_t = \delta_t & a(t) = e^{\int_0^t \delta_s ds} \\
+\hline	\hline
+\text{facteur accumulation} &  & \frac{a(n)}{a(m)} = e^{\int_m^n \delta_s ds} \\
+\hline
+	\end{array}
+\end{displaymath}
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+\subsection*{Chapitre 2}
+% Chapitre 2
+\begin{displaymath}	% Formule somme géométrique
+\begin{array}{|c|c|}
+\hline
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Somme géométrique}} \\
+\text{Définition somme géométrique} & \sum_{j=m}^n ar^m = \left( \frac{1 - r^{n-m+1}}{1-r} \right) \\
+\hline \hline % valeur accumulée
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Valeur accumulée d'une rente}} \\	
+\rowcolor{lightgray} \text{au moment} & \text{formule} \\
+	\hline 	\hline
+\text{du dernier versement}	& k \cdot \sx{\angln j} \\
+ &  \sx{\angln j} = \left( \frac{(1+j)^n - 1}{j} \right) \\
+	\hline
+\text{$r$ période après le dernier versement}& k \cdot s_{\angln j}(1+j)^r \\
+\text{\emph{équivalent à}} & k \cdot \left( \sx{\angl{n+r} j} - \sx{\angln j} \right) \\ 
+\hline \hline		
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Valeur actualisée d'une rente}} \\
+	\hline % valeur actualisée
+\rowcolor{lightgray} \text{au moment} & \text{formule} \\
+	\hline 	\hline
+\text{fin de période}	& k \cdot a_{\angln j} \\
+ &  a_{\angln j} = \left( \frac{1 - (1+j)^{-n}}{j} \right) \\
+	\hline
+\text{début de période}& \ax**{\angln j} = \ax{\angln j} (1+j) \\
+	\hline
+\text{rente perpétuelle ($n \to \infty$)} & \frac{k}{j} \\
+	\hline \hline
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{plusieurs paiements dans un même année}} \\
+\hline
+mP \sx{\angln i}^{(m)} = mP\left( \frac{(1+i)^n -1}{i^{(m)}} \right)	& mP \sx**{\angln i}^{(m)} = \left( \frac{(1+i)^n -1}{d^{(m)}} \right)\\
+mP \ax{\angln i}^{(m)} = mP\left( \frac{1-(1+i)^{-n}}{i^{(m)}} \right)	& mP \ax**{\angln i}^{(m)} = \left( \frac{1-(1+i)^{-n}}{d^{(m)}} \right)\\
+\hline
+\end{array}
+\end{displaymath}
+% croissance géométrique
+\begin{displaymath}
+\begin{array}{|cc|}
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Croissance des versements géométrique}} \\
+\hline
+\text{valeur}_{t=1} = P \gamma^{-1} \ax{\angln j^*}	& \text{valeur}_{t=0} = P \ax**{\angln j^*}\\
+\text{valeur}_{t=n} = P \gamma^{n-1} \sx{\angln j^*} & \text{valeur}_{t=n+1} = P \gamma^{n} \sx**{\angln j^*} \\
+\multicolumn{2}{|c|}{\text{où} j^* = \frac{1+j}{\gamma} - 1} \\
+\hline \hline % si fréquence versement > que croissance géométrique
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{si fréquence versements $>$ que croissance géométrique}} \\
+P \ax{\angl{m} j^*} \ax**{\angln j^*}		&\text{où }  j^* = \frac{(1+j)^m}{\gamma} -1 \\
+\hline \hline % modèle d'actualisation des dividendes
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Modèle d'actualisation des dividendes}} \\
+\text{Prix} = \frac{D}{1 + j - \gamma} = \frac{D}{j-g} & \text{où } \gamma = 1 + g \\
+\hline \hline
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Croissance arithmétique (\emph{increasing annuities})}} \\ % croissance arithmétique
+(Ia)_{\angln j} = \frac{\ax**{\angln j} - nv^n}{j} & (I\ax**{})_{\angln j} = \frac{\ax**{\angln j} - nv^n}{d_j} \\
+(Is)_{\angln j} = \frac{\sx**{\angln j} - n}{j} & (I\sx**{})_{\angln j} = \frac{\sx**{\angln j} - n}{d_j} \\
+\hline \hline
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{décroissance arithmétique (\emph{decreasing annuities})}} \\ % décroissance arithmétique
+(Da)_{\angln j} = \frac{n - \ax{\angln j}}{j} & (D\ax**{})_{\angln j} = \frac{n - \ax{\angln j}}{d_j} \\
+(Ds)_{\angln j} = \frac{n(1+j)^n - \sx{\angln j}}{j} & (D\sx**{})_{\angln j} = \frac{n(1+j)^n - \sx{\angln j}}{d_j} \\
+\hline	\hline
+\rowcolor{Apricot} \multicolumn{2}{|c|}{\text{Rentes à paiement continu}} \\ % Rentes à paiement continu
+VA =  \int_0^n h(u) \underbrace{e^{-\int_0^u \delta_s ds}}_{e^{-\delta u} \text{ si } \delta_t = \delta\ \forall\ t} du & \vline \text{Valeur}_{t=n} = \int_0^n h(u) \underbrace{e^{\int_u^n \delta_s ds}}_{e^{\delta(n-u)} \text{ si } \delta_t = \delta\ \forall\ t} du  \\
+\hline
+& \\
+(\bar{I}\bar{a})_{\angln i} = \frac{\ax*{\angln i} - ne^{-\delta n}}{\delta}	& (\bar{I}\bar{s})_{\angln i} = \frac{\sx*{\angln i} - n}{\delta} \\
+ (\bar{D}\bar{a})_{\angln i} = \frac{n - \ax*{\angln i}}{\delta} & (\bar{D}\bar{s})_{\angln i} = \frac{ne^{\delta n} - \sx*{\angln i}}{\delta} \\
+ \hline
+\end{array}
+\end{displaymath}
+
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+\subsection*{Chapitre 3}
+% Chapitre 3
+\begin{displaymath}		% début tableau synthèse
+\begin{array}{|c | c | c|}
+\hline
+\rowcolor{Periwinkle} \multicolumn{3}{c}{ \text{Tableau synthèse des 2 comptes}} \\
+\hline	\hline
+\rowcolor{lightgray} \text{éléments} & \text{Relation avec prêteur ($L$)}	& \text{Fonds d'amortissement ($F$)} \\
+\hline
+OB_0	& OB_0^L = L	& OB_0^F = 0 \\
+\hline
+OB_t		& OB_t^L = L 	& OB_t^F  \\
+\hline
+OB_n		& OB_n^L = 0 	& OB_n^F = 0\\
+\hline
+K_t		& K_t^L = L j_1	& K_t^F = \frac{L}{\sx{\angln j_2}} \\
+\hline
+K_n		& K_n^L = L j_1 + L	& K_n^F = \frac{L}{\sx{\angln j_2}} - L \\
+\hline
+I_t		& I_t^L = L j_1	& I_t^F = \frac{-L}{\sx{\angln j_2}} \left[ (1+j_2)^{t-1} -1 \right] \\
+\hline
+PR_t		& PR_t^L = 0	& PR_t^F = \frac{L}{\sx{\angln j_2}} (1+j_2)^{t-1} \\
+\hline
+PR_n		& PR_n^L = L	& PR_n^F = \frac{L}{\sx{\angln j_2}} (1+j_2)^{n-1} - L \\
+\hline
+\end{array}
+\end{displaymath} 		% fin tableau synthèse
+
+
+% -------------------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------------
+% CHAPITRE 4
+\subsection*{Chapitre 4}
+\begin{displaymath}
+\begin{array}{| c | c |}
+\hline
+\rowcolor{GreenYellow} \multicolumn{2}{|c|}{ \text{Prix obligation après un coupon}} \\
+\hline	\hline
+\text{première forme}	& P = Fr \ax{\angln j} + C v^n \\
+\text{deuxième forme}	& P = (Fr - Cj) \ax{\angln j} + C \\
+\hline	\hline
+\rowcolor{GreenYellow} \multicolumn{2}{|c|}{ \text{Prix obligation entre 2 coupons}} \\
+\hline	\hline
+\text{avec méthode rétrospective}	& P_t = P_0(1+j)^t \\
+\text{avec méthode prospective}	& P_t = (P_1 + Fr)(1+j)^{-(1-t)}\\
+\text{Prix du marché}				& \text{Prix}_t = P_t - t \times Fr \\
+\hline	\hline
+\end{array}
+\end{displaymath}
+% Amortissement d'une obligation
+\begin{displaymath}
+\begin{array}{| c | c | c |}
+\hline
+\rowcolor{GreenYellow} \multicolumn{3}{|c|}{ \text{Amortissement d'une obligation}} \\
+\hline
+OB_t		&	OB_t = OB_{t-1} - PR_t	& OB_t = BV_t = (Fr - Cj)\ax{\angl{n-t} j} + C \\
+\hline
+I_t		&	I_t = OB_{t-1} j			& I_t = (Fr - Cj)(1 - v_j^{n-t+1}) + Cj \\
+\hline
+PR_t		& PR_t = K_t - I_t			& PR_t = (Fr - Cj) v_j^{n-t+1}\\
+\hline
+PR_n		&PR_n = K_t + C - I_t			& PR_n = (Fr - Cj)(1 - v_j^{n-t+1}) + C \\
+\hline
+\end{array}
+\end{displaymath}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% -------------------------------------------------------------------------------------------
+\end{document}	
+	
+

@@ -1,0 +1,6 @@
+# Here are the files that needs to be ignored by git while commiting
+# no file starting by .log , .out , .gz or .aux
+*.log
+*.out
+*.gz
+*.aux
