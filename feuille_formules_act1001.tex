@@ -229,12 +229,99 @@ PR_n		&PR_n = K_t + C - I_t			& PR_n = (Fr - Cj)(1 - v_j^{n-t+1}) + C \\
 \end{displaymath}
 
 
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+\subsection*{Chapitre 5}
+\begin{displaymath}
+% Dollar-Weighted return
+\begin{array}{| c | c | c |}
+\hline
+\rowcolor{Bittersweet} \multicolumn{2}{|c|}{ \text{Taux de rendement pondéré en dollar}} \\
+\hline
+i = \frac{\purple{I}}{A + \sum_{k=1}^n C_k(1-t_k)}	& \purple{I} = B - (A + \sum_{k=1}^n C_k) \\
+\hline \hline
+\end{array}
+\end{displaymath}
+\begin{displaymath}
+% Time-weighted Return
+\begin{array}{| c |}
+\hline
+\rowcolor{Bittersweet} \multicolumn{1}{|c|}{ \text{Taux de rendement pondéré par période}} \\
+\hline
+1 + i = \left(\frac{F_1}{A} \right) \times \left( \frac{F_2}{F_1 + C_1} \right)\times \left( \frac{F_3}{F_2 + C_2} \right) \times ... \times \left( \frac{F_n}{F_{n-1} + C_{n-1}} \right) \times \left( \frac{B}{F_n + C_n} \right) \\
+\hline
+\end{array}
+\end{displaymath}
 
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+\subsection*{Chapitre 6}
+\begin{displaymath}
+\begin{array}{| c | c |}
+\hline
+\rowcolor{yellow} \multicolumn{2}{|c|}{ \text{Structure par échéance des taux d'intérêt}} \\
+\hline
+\text{Prix Obligation \emph{Zero-Coupon}}	& P(0,t) = (1 + s_0(t))^{-t} \\
+\text{Taux au comptant (\emph{spot})}	& s_0(t) \\
+\text{Taux à terme (\emph{Forward})}	& 1 + i_0(t-1,t) = \frac{(1+s_0(t))^t}{(1+ s_0(t-1)^{t-1}} - 1\\
+\hline
+\rowcolor{yellow} \multicolumn{2}{|c|}{ \text{Relation entre les taux \emph{Spot} et les taux \emph{Forward}}} \\
+\hline
+\multicolumn{2}{|c|}{(1 + s_0(n))^n = \prod_{k=1}^n (1 + i_0(k-1,k))} \\
+\hline
+\end{array}
+\end{displaymath}
 
-
-
-
-
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+\subsection*{Chapitre 7}
+\begin{displaymath}
+\begin{array}{| c | c | c |}
+\hline
+\rowcolor{SeaGreen} \multicolumn{3}{|c|}{ \text{Duration de Macauley}} \\
+\hline	\hline
+\text{Duration}			& \frac{\sum_{t=1}^n t K_t(1+s_0(t)){-t}}{\sum_{t=1}^n K_t(1+s_0(t)){-t}} & \\
+\hline
+\text{Convexité}		& \frac{\sum_{t=1}^n t^2 K_t(1+s_0(t)){-t}}{\sum_{t=1}^n K_t(1+s_0(t)){-t}}& \\
+\hline
+\text{Duration modifiée}	& - \frac{P'(i)}{P(i)} 	& \frac{D}{1 + i}\\
+\hline
+\text{Convexité modifiée}	& \frac{P''(i)}{P(i)}	& \frac{C + D}{(1+i)^2} \\
+\end{array}
+\end{displaymath}
+% Duration d'une obligation à coupon-zéro
+\begin{displaymath}
+\begin{array}{| c | c |}
+\hline
+\rowcolor{SeaGreen} \multicolumn{2}{|c|}{ \text{Duration d'un obligation \emph{Zéro-coupon}}} \\
+\hline	\hline
+\text{Duration}		& n \\
+\hline
+\text{Convexité}	& n^2 \\
+\hline
+\text{MD}			& \frac{n}{1+i} \\
+\hline
+\text{MC}			& \frac{n(n+1)}{(1+i)^2} \\
+\hline
+\end{array}
+\end{displaymath}
+% Approximation du prix d'une obligation
+\begin{displaymath}
+\begin{array}{| c | c |}
+\hline
+\rowcolor{SeaGreen} \multicolumn{2}{|c|}{ \text{Approximation du prix dû à un changement de taux d'intérêt}} \\
+\hline	\hline
+\text{Approximation linéaire}	& P(i) \approx P(i_0)(1 - h \cdot MD) \\
+\hline
+\text{Approximation quadratique}	& P(i) \approx P(i_0)(1 - h \cdot MD + \frac{1}{2} h^2 \cdot MC)  \\
+\hline
+\text{Approximation Macauley}		& P(i) \approx P(i_0) \left( \frac{1 + i_0}{1 + i_0 + h} \right)^D \\
+\hline
+\end{array}
+\end{displaymath}
 
 
 
